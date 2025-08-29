@@ -6,11 +6,10 @@
 
 ## About
 
-This repository contains the source code for my academic portfolio website, showcasing my research, publications, and professional experience in robotics, machine learning, and optimization.
-
-**Current Position:** Assistant Professor, Digital Learning Division  
-**Institution:** Birla Institute of Technology And Science, Pilani  
-**Ph.D.:** Indian Institute of Technology Kharagpur (2018-2025)
+**Current Position:** Assistant Professor, Data Science and Artificial Intelligence Department  
+**Institution:** BITS Pilani Digital, Birla Institute of Technology And Science, Bangalore  
+**Ph.D.:** Indian Institute of Technology Kharagpur
+**M.Tech** National Institute of Technology Agartala
 
 ## Research Areas
 
@@ -25,23 +24,6 @@ This repository contains the source code for my academic portfolio website, show
 - Publications in Engineering Optimization (Taylor & Francis), International Journal of Humanoid Robotics
 - Collaborative research with Prof. Kalyanmoy Deb (Michigan State University)
 - Resource Person for NPTEL Experimental Robotics course
-
-## Website Features
-
-- Responsive design with smooth scroll animations
-- Interactive publication filtering system
-- Professional academic layout
-- Mobile-friendly interface
-- Downloadable CV and direct contact links
-
-## Repository Structure
-
-```
-PushpendraProfile/
-├── index.html                 # Main website file
-├── Pushpendra_Gupta_CV.pdf   # Academic CV
-└── README.md                 # This file
-```
 
 ## Professional Links
 
@@ -72,30 +54,7 @@ PushpendraProfile/
 
 ## Contact Information
 
-**Address:**  
-Tower-A4, Cherry County  
-Greater Noida West, Uttar Pradesh  
-Pin-201306, India  
-
-**Phone:** +91 9599042150  
 **Email:** pushpendra050@gmail.com
 
-## Website Updates
 
-To update website content:
-1. Edit `index.html` for main content changes
-2. Replace `Pushpendra_Gupta_CV.pdf` with updated CV
-3. Commit changes to see updates live (may take 5-10 minutes)
-
-## Academic Achievements
-
-- Ph.D. from Indian Institute of Technology Kharagpur
-- M.Tech Gold Medalist (CGPA: 9.17) from NIT Agartala
-- GATE Qualified (2013, 2015)
-- Certificate of Excellence during B.Tech
-
----
-
-*This website serves as a comprehensive academic portfolio highlighting research contributions in robotics, optimization, and machine learning. For collaboration opportunities or academic inquiries, please use the contact information provided above.*
-
-**Last Updated:** December 2024
+**Last Updated:** August 2025
