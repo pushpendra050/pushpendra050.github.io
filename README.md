@@ -1,6 +1,6 @@
 # Pushpendra Gupta - Academic Portfolio
 
-**Website:** [https://pushpendra050.github.io/PushpendraProfile/](https://pushpendra050.github.io/PushpendraProfile/)
+**Website:** [https://pushpendra050.github.io/PushpendraProfile/](https://pushpendra050.github.io/pushpendraProfile/)
 
 ---
 
