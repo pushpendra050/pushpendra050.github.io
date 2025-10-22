@@ -4,490 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pushpendra Gupta - Academic Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            box-shadow: 0 0 30px rgba(0,0,0,0.1);
-            min-height: 100vh;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Header with animated background */
-        .header {
-            background: linear-gradient(135deg, #2c3e50, #3498db);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-            animation: shine 3s ease-in-out infinite;
-        }
-
-        @keyframes shine {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        .profile-container {
-            position: relative;
-            z-index: 2;
-        }
-
-        .profile-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 5px solid white;
-            margin: 0 auto 2rem;
-            display: block;
-            object-fit: cover;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .profile-image:hover {
-            transform: scale(1.05) rotate(2deg);
-        }
-
-        .header h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            opacity: 0;
-            animation: slideInUp 1s ease 0.5s forwards;
-        }
-
-        .header .subtitle {
-            font-size: 1.4rem;
-            opacity: 0.9;
-            margin-bottom: 1rem;
-            opacity: 0;
-            animation: slideInUp 1s ease 0.8s forwards;
-        }
-
-        .header .institution {
-            font-size: 1.1rem;
-            opacity: 0.8;
-            opacity: 0;
-            animation: slideInUp 1s ease 1.1s forwards;
-        }
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Social Links */
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
-            opacity: 0;
-            animation: slideInUp 1s ease 1.4s forwards;
-        }
-
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.1rem;
-            padding: 0.5rem 1rem;
-            background: rgba(255,255,255,0.1);
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .social-links a:hover {
-            background: rgba(255,255,255,0.2);
-            transform: translateY(-3px);
-        }
-
-        /* Navigation */
-        .navigation {
-            position: sticky;
-            top: 0;
-            background: rgba(52, 73, 94, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 2rem;
-            z-index: 1000;
-            border-bottom: 2px solid #3498db;
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            background: #3498db;
-            transform: translateY(-2px);
-        }
-
-        /* Main Content */
-        .main-content {
-            padding: 0 2rem;
-        }
-
-        .section {
-            padding: 4rem 0;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s ease;
-        }
-
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .section h2 {
-            font-size: 2.5rem;
-            color: #2c3e50;
-            margin-bottom: 2rem;
-            text-align: center;
-            position: relative;
-        }
-
-        .section h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(45deg, #3498db, #2980b9);
-            border-radius: 2px;
-        }
-
-        /* Education Cards */
-        .education-grid {
-            display: grid;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .education-card {
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            padding: 2rem;
-            border-radius: 15px;
-            border-left: 5px solid #3498db;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .education-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(52,152,219,0.1), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .education-card:hover::before {
-            left: 100%;
-        }
-
-        .education-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-
-        .education-card h3 {
-            color: #2c3e50;
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .education-card .year {
-            color: #3498db;
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-
-        .education-card .institution {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Publications */
-        .publications-container {
-            margin-top: 2rem;
-        }
-
-        .publication-filters {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            background: #ecf0f1;
-            border: 2px solid #bdc3c7;
-            padding: 0.7rem 1.5rem;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .filter-btn.active {
-            background: #3498db;
-            color: white;
-            border-color: #3498db;
-        }
-
-        .publication-item {
-            background: white;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            border-radius: 10px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-            border-left: 4px solid #3498db;
-            transition: all 0.3s ease;
-            opacity: 0;
-            transform: translateX(-20px);
-            animation: slideInLeft 0.5s ease forwards;
-        }
-
-        .publication-item:nth-child(even) {
-            border-left-color: #e74c3c;
-            animation-delay: 0.1s;
-        }
-
-        .publication-item:nth-child(odd) {
-            animation-delay: 0.2s;
-        }
-
-        .publication-item:hover {
-            transform: translateX(10px);
-            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
-        }
-
-        @keyframes slideInLeft {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .publication-item h4 {
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-            line-height: 1.4;
-        }
-
-        .publication-item .journal {
-            color: #3498db;
-            font-weight: 600;
-            margin-bottom: 0.3rem;
-        }
-
-        .publication-item .authors {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .skill-category {
-            background: linear-gradient(135deg, #ffffff, #f8f9fa);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        }
-
-        .skill-category h3 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .skill-category .skills-list {
-            color: #666;
-            line-height: 1.8;
-        }
-
-        /* Contact Section */
-        .contact-info {
-            background: linear-gradient(135deg, #2c3e50, #3498db);
-            color: white;
-            padding: 3rem;
-            border-radius: 20px;
-            margin-top: 2rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-info::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: pulse 4s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.1); opacity: 0.3; }
-        }
-
-        .contact-info h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .contact-details {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-top: 2rem;
-            position: relative;
-            z-index: 2;
-            flex-wrap: wrap;
-        }
-
-        .contact-item {
-            text-align: center;
-        }
-
-        .contact-item strong {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        /* Footer */
-        .footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2.5rem;
-            }
-            
-            .nav-links {
-                gap: 1rem;
-            }
-            
-            .main-content {
-                padding: 0 1rem;
-            }
-            
-            .section {
-                padding: 2rem 0;
-            }
-            
-            .contact-details {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-            
-            .social-links {
-                flex-wrap: wrap;
-                gap: 1rem;
-            }
-        }
-
-        /* Scroll indicator */
-        .scroll-indicator {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: rgba(52, 152, 219, 0.3);
-            z-index: 9999;
-        }
-
-        .scroll-progress {
-            height: 100%;
-            background: linear-gradient(90deg, #3498db, #2980b9);
-            width: 0%;
-            transition: width 0.1s ease;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Scroll Indicator -->
@@ -503,7 +20,7 @@
                 <h1>Pushpendra Gupta</h1>
                 <div class="subtitle">Ph.D. | Assistant Professor</div>
                 <div class="institution">Birla Institute of Technology And Science, Pilani</div>
-                
+
                 <div class="social-links">
                     <a href="mailto:pushpendra050@gmail.com" target="_blank">📧 Email</a>
                     <a href="https://linkedin.com/in/pushpendra050" target="_blank">💼 LinkedIn</a>
@@ -538,14 +55,14 @@
                         <p><strong>Thesis:</strong> Multi- and Many-Objectives Optimization in Gait Generation of 25-DoF Humanoid Robot Using Genetic and Evolutionary Algorithms</p>
                         <p><strong>Supervisors:</strong> Prof. D.K. Pratihar (IIT Kharagpur) and Prof. Kalyanmoy Deb (Michigan State University, USA)</p>
                     </div>
-                    
+
                     <div class="education-card">
                         <h3>M. Tech in Computer Integrated Manufacturing</h3>
                         <div class="year">2013 – 2015</div>
                         <div class="institution">National Institute of Technology Agartala, Tripura, India</div>
                         <p><strong>Achievement:</strong> Gold Medalist (CGPA: 9.17)</p>
                     </div>
-                    
+
                     <div class="education-card">
                         <h3>B. Tech (Hons) in Mechanical and Automation</h3>
                         <div class="year">2007 – 2011</div>
@@ -565,14 +82,14 @@
                         <div class="institution">Birla Institute of Technology And Science, Pilani</div>
                         <p>Digital Learning Division</p>
                     </div>
-                    
+
                     <div class="education-card">
                         <h3>Assistant Professor (On Contract)</h3>
                         <div class="year">Aug 2024 – May 2025</div>
                         <div class="institution">The LNM Institute of Information Technology, Jaipur</div>
                         <p>Mechanical-Mechatronics Department</p>
                     </div>
-                    
+
                     <div class="education-card">
                         <h3>Resource Person</h3>
                         <div class="year">Apr 2023 – Apr 2024</div>
@@ -595,7 +112,7 @@
                             Pattern Recognition
                         </div>
                     </div>
-                    
+
                     <div class="skill-category">
                         <h3>🔧 Optimization</h3>
                         <div class="skills-list">
@@ -605,7 +122,7 @@
                             Swarm Intelligence
                         </div>
                     </div>
-                    
+
                     <div class="skill-category">
                         <h3>🤖 Robotics</h3>
                         <div class="skills-list">
@@ -615,7 +132,7 @@
                             Biomechanics
                         </div>
                     </div>
-                    
+
                     <div class="skill-category">
                         <h3>💻 Soft Computing</h3>
                         <div class="skills-list">
@@ -638,45 +155,81 @@
                         <button class="filter-btn" onclick="filterPublications('conferences')">Conferences</button>
                         <button class="filter-btn" onclick="filterPublications('books')">Books</button>
                     </div>
-                    
+
                     <div id="publicationsList">
-                        <!-- Book -->
-                        <div class="publication-item" data-type="books">
+                        <!-- Book (O1 - internal reference) -->
+                        <div class="publication-item" data-type="books" data-id="O1">
                             <h4>Biomedical Robots and Devices in Healthcare: Opportunities and Challenges for Future Applications</h4>
                             <div class="journal">Elsevier, December 2024</div>
                             <div class="authors">Faiz Iqbal, Pushpendra Gupta, Vidyapati Kumar, Dilip Kumar Pratihar (Eds.)</div>
+                            <div class="abstract-container">
+                                <button class="abstract-toggle" id="btn-O1" onclick="toggleAbstract('O1')">Read Abstract</button>
+                                <div class="abstract-text" id="abstract-O1">
+                                    This comprehensive book explores the latest developments in biomedical robotics and healthcare devices. It covers opportunities and challenges in implementing robotic solutions for future healthcare applications, including surgical robots, rehabilitation devices, and assistive technologies. The book brings together contributions from leading researchers and practitioners in the field.
+                                </div>
+                            </div>
                         </div>
-                        
+
                         <!-- Journal Papers -->
-                        <div class="publication-item" data-type="journals">
+                        <div class="publication-item" data-type="journals" data-id="J1">
                             <h4>Many-Objective Robust Gait Optimization for a 25-DOF NAO Robot Using NSGA-III</h4>
                             <div class="journal">Engineering Optimization, Taylor & Francis, 2025</div>
                             <div class="authors">Pushpendra Gupta, Dilip Kumar Pratihar, Kalyanmoy Deb</div>
+                            <div class="abstract-container">
+                                <button class="abstract-toggle" id="btn-J1" onclick="toggleAbstract('J1')">Read Abstract</button>
+                                <div class="abstract-text" id="abstract-J1">
+                                    This paper presents a many-objective robust gait optimization approach for the 25-DOF NAO humanoid robot using the NSGA-III algorithm. The study addresses multiple conflicting objectives simultaneously, including stability, energy efficiency, walking speed, and robustness. The proposed methodology demonstrates significant improvements in generating stable and efficient gaits for humanoid robots in various walking conditions.
+                                </div>
+                            </div>
                         </div>
-                        
-                        <div class="publication-item" data-type="journals">
+
+                        <div class="publication-item" data-type="journals" data-id="J2">
                             <h4>Analysis and optimization of gait cycle of 25 dof robot using particle swarm optimization and genetic algorithms</h4>
                             <div class="journal">International Journal of Humanoid Robotics, Vol 21, No. 2, 2024</div>
                             <div class="authors">Pushpendra Gupta, Dilip Kumar Pratihar, Kalyanmoy Deb</div>
+                            <div class="abstract-container">
+                                <button class="abstract-toggle" id="btn-J2" onclick="toggleAbstract('J2')">Read Abstract</button>
+                                <div class="abstract-text" id="abstract-J2">
+                                    This research investigates the gait cycle optimization of a 25-DOF humanoid robot using two prominent evolutionary algorithms: Particle Swarm Optimization (PSO) and Genetic Algorithms (GA). The study provides a comprehensive analysis of gait parameters and compares the performance of both algorithms in generating optimal walking patterns. Results demonstrate the effectiveness of evolutionary approaches in solving complex robotic gait optimization problems.
+                                </div>
+                            </div>
                         </div>
-                        
+
                         <!-- Conference Papers -->
-                        <div class="publication-item" data-type="conferences">
+                        <div class="publication-item" data-type="conferences" data-id="C1">
                             <h4>A Comparative Study of Pareto optimal Solution Sets for NAO Robot Gait Optimization using the Dominance Move Indicator based on Mixed Integer Programming</h4>
                             <div class="journal">6th National Conference on Advances in Multidisciplinary Design, Analysis and Optimization 2023</div>
                             <div class="authors">Pushpendra Gupta, Dilip Kumar Pratihar, Kalyanmoy Deb</div>
+                            <div class="abstract-container">
+                                <button class="abstract-toggle" id="btn-C1" onclick="toggleAbstract('C1')">Read Abstract</button>
+                                <div class="abstract-text" id="abstract-C1">
+                                    This paper presents a comparative study of Pareto optimal solution sets obtained from multi-objective optimization of NAO robot gait. The study employs the Dominance Move (DM) indicator based on Mixed Integer Programming to evaluate and compare different Pareto fronts. The findings provide insights into the quality and diversity of solutions obtained from various optimization approaches.
+                                </div>
+                            </div>
                         </div>
-                        
-                        <div class="publication-item" data-type="conferences">
+
+                        <div class="publication-item" data-type="conferences" data-id="C2">
                             <h4>A knee-based multi-objective optimization for gait cycle of 25-dof NAO humanoid robot in single and double support phases</h4>
                             <div class="journal">12th International Conference on Soft Computing for Problem Solving 2023</div>
                             <div class="authors">Pushpendra Gupta, Kalyanmoy Deb, Dilip Kumar Pratihar</div>
+                            <div class="abstract-container">
+                                <button class="abstract-toggle" id="btn-C2" onclick="toggleAbstract('C2')">Read Abstract</button>
+                                <div class="abstract-text" id="abstract-C2">
+                                    This work focuses on knee-based multi-objective optimization for the gait cycle of a 25-DOF NAO humanoid robot, considering both single and double support phases. The study examines the critical role of knee joint movements in maintaining stability and efficiency during walking. The optimization framework addresses multiple objectives while ensuring smooth transitions between different support phases.
+                                </div>
+                            </div>
                         </div>
-                        
-                        <div class="publication-item" data-type="conferences">
+
+                        <div class="publication-item" data-type="conferences" data-id="C3">
                             <h4>Effect of B2O3 containing fluxes on the microstructure and mechanical properties in submerged arc welded mild steel plates</h4>
                             <div class="journal">IOP Conference Series: Materials Science and Engineering, 2016</div>
                             <div class="authors">Pushpendra Gupta, Joydeep Roy, Ram Naresh Rai, A.K. Prasada Rao, Subhash Chandra Saha</div>
+                            <div class="abstract-container">
+                                <button class="abstract-toggle" id="btn-C3" onclick="toggleAbstract('C3')">Read Abstract</button>
+                                <div class="abstract-text" id="abstract-C3">
+                                    This paper investigates the effect of B2O3 containing fluxes on microstructure and mechanical properties of submerged arc welded mild steel plates. The study examines various flux compositions and their impact on weld quality, microstructural evolution, and mechanical strength. Results provide valuable insights for optimizing welding parameters in industrial applications.
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -695,7 +248,7 @@
                             R
                         </div>
                     </div>
-                    
+
                     <div class="skill-category">
                         <h3>🎨 Design Software</h3>
                         <div class="skills-list">
@@ -705,7 +258,7 @@
                             3D Design
                         </div>
                     </div>
-                    
+
                     <div class="skill-category">
                         <h3>📚 Academic</h3>
                         <div class="skills-list">
@@ -715,7 +268,7 @@
                             Data Analysis
                         </div>
                     </div>
-                    
+
                     <div class="skill-category">
                         <h3>🗣️ Languages</h3>
                         <div class="skills-list">
@@ -759,111 +312,6 @@
         </footer>
     </div>
 
-    <script>
-        // Scroll animations
-        const sections = document.querySelectorAll('.section');
-        const scrollProgress = document.getElementById('scrollProgress');
-
-        function updateScrollProgress() {
-            const scrolled = window.pageYOffset;
-            const maxHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const progress = (scrolled / maxHeight) * 100;
-            scrollProgress.style.width = progress + '%';
-        }
-
-        function checkSections() {
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                const windowHeight = window.innerHeight;
-                const scrollPosition = window.pageYOffset;
-
-                if (scrollPosition >= sectionTop - windowHeight + 100) {
-                    section.classList.add('visible');
-                }
-            });
-        }
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                
-                window.scrollTo({
-                    top: targetSection.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Publication filter functionality
-        function filterPublications(type) {
-            const publications = document.querySelectorAll('.publication-item');
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            
-            // Update active filter button
-            filterBtns.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-            
-            // Filter publications
-            publications.forEach((pub, index) => {
-                if (type === 'all' || pub.dataset.type === type) {
-                    pub.style.display = 'block';
-                    pub.style.animationDelay = (index * 0.1) + 's';
-                } else {
-                    pub.style.display = 'none';
-                }
-            });
-        }
-
-        // Event listeners
-        window.addEventListener('scroll', () => {
-            updateScrollProgress();
-            checkSections();
-        });
-
-        window.addEventListener('load', () => {
-            checkSections();
-            updateScrollProgress();
-        });
-
-        // Add some interactive hover effects
-        document.querySelectorAll('.education-card, .skill-category, .publication-item').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-5px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        // Add typing effect to header
-        function typeWriter(element, text, speed = 100) {
-            let i = 0;
-            element.innerHTML = '';
-            
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            type();
-        }
-
-        // Initialize typing effect after page loads
-        window.addEventListener('load', () => {
-            const subtitle = document.querySelector('.subtitle');
-            if (subtitle) {
-                setTimeout(() => {
-                    typeWriter(subtitle, 'Ph.D. | Assistant Professor', 150);
-                }, 2000);
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

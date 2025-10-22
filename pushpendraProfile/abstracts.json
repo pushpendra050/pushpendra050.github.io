@@ -1,0 +1,58 @@
+{
+  "publications": [
+    {
+      "id": "O1",
+      "type": "books",
+      "title": "Biomedical Robots and Devices in Healthcare: Opportunities and Challenges for Future Applications",
+      "journal": "Elsevier, December 2024",
+      "authors": "Faiz Iqbal, Pushpendra Gupta, Vidyapati Kumar, Dilip Kumar Pratihar (Eds.)",
+      "year": "2024",
+      "abstract": "This comprehensive book explores the latest developments in biomedical robotics and healthcare devices. It covers opportunities and challenges in implementing robotic solutions for future healthcare applications, including surgical robots, rehabilitation devices, and assistive technologies. The book brings together contributions from leading researchers and practitioners in the field."
+    },
+    {
+      "id": "J1",
+      "type": "journals",
+      "title": "Many-Objective Robust Gait Optimization for a 25-DOF NAO Robot Using NSGA-III",
+      "journal": "Engineering Optimization, Taylor & Francis, 2025",
+      "authors": "Pushpendra Gupta, Dilip Kumar Pratihar, Kalyanmoy Deb",
+      "year": "2025",
+      "abstract": "This paper presents a many-objective robust gait optimization approach for the 25-DOF NAO humanoid robot using the NSGA-III algorithm. The study addresses multiple conflicting objectives simultaneously, including stability, energy efficiency, walking speed, and robustness. The proposed methodology demonstrates significant improvements in generating stable and efficient gaits for humanoid robots in various walking conditions."
+    },
+    {
+      "id": "J2",
+      "type": "journals",
+      "title": "Analysis and optimization of gait cycle of 25 dof robot using particle swarm optimization and genetic algorithms",
+      "journal": "International Journal of Humanoid Robotics, Vol 21, No. 2, 2024",
+      "authors": "Pushpendra Gupta, Dilip Kumar Pratihar, Kalyanmoy Deb",
+      "year": "2024",
+      "abstract": "This research investigates the gait cycle optimization of a 25-DOF humanoid robot using two prominent evolutionary algorithms: Particle Swarm Optimization (PSO) and Genetic Algorithms (GA). The study provides a comprehensive analysis of gait parameters and compares the performance of both algorithms in generating optimal walking patterns. Results demonstrate the effectiveness of evolutionary approaches in solving complex robotic gait optimization problems."
+    },
+    {
+      "id": "C1",
+      "type": "conferences",
+      "title": "A Comparative Study of Pareto optimal Solution Sets for NAO Robot Gait Optimization using the Dominance Move Indicator based on Mixed Integer Programming",
+      "journal": "6th National Conference on Advances in Multidisciplinary Design, Analysis and Optimization 2023",
+      "authors": "Pushpendra Gupta, Dilip Kumar Pratihar, Kalyanmoy Deb",
+      "year": "2023",
+      "abstract": "This paper presents a comparative study of Pareto optimal solution sets obtained from multi-objective optimization of NAO robot gait. The study employs the Dominance Move (DM) indicator based on Mixed Integer Programming to evaluate and compare different Pareto fronts. The findings provide insights into the quality and diversity of solutions obtained from various optimization approaches."
+    },
+    {
+      "id": "C2",
+      "type": "conferences",
+      "title": "A knee-based multi-objective optimization for gait cycle of 25-dof NAO humanoid robot in single and double support phases",
+      "journal": "12th International Conference on Soft Computing for Problem Solving 2023",
+      "authors": "Pushpendra Gupta, Kalyanmoy Deb, Dilip Kumar Pratihar",
+      "year": "2023",
+      "abstract": "This work focuses on knee-based multi-objective optimization for the gait cycle of a 25-DOF NAO humanoid robot, considering both single and double support phases. The study examines the critical role of knee joint movements in maintaining stability and efficiency during walking. The optimization framework addresses multiple objectives while ensuring smooth transitions between different support phases."
+    },
+    {
+      "id": "C3",
+      "type": "conferences",
+      "title": "Effect of B2O3 containing fluxes on the microstructure and mechanical properties in submerged arc welded mild steel plates",
+      "journal": "IOP Conference Series: Materials Science and Engineering, 2016",
+      "authors": "Pushpendra Gupta, Joydeep Roy, Ram Naresh Rai, A.K. Prasada Rao, Subhash Chandra Saha",
+      "year": "2016",
+      "abstract": "This paper investigates the effect of B2O3 containing fluxes on microstructure and mechanical properties of submerged arc welded mild steel plates. The study examines various flux compositions and their impact on weld quality, microstructural evolution, and mechanical strength. Results provide valuable insights for optimizing welding parameters in industrial applications."
+    }
+  ]
+}
