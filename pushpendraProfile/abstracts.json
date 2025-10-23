@@ -14,7 +14,7 @@
       "id": "J1",
       "type": "journals",
       "title": "Analysis and Optimization of Gait Cycle of 25-dof NAO Robot using Particle Swarm Optimization and Genetic Algorithms",
-      "journal": "International Journal of Humanoid Robotics, Vol 21, No. 2, 2024",
+      "journal": "International Journal of Humanoid Robotics, World Scientific, Vol 21, No. 2, 2024",
       "authors": "Pushpendra Gupta, Dilip Kumar Pratihar, Kalyanmoy Deb",
       "year": "2024",
       "link": "https://www.worldscientific.com/doi/abs/10.1142/S0219843623500111",
@@ -34,7 +34,7 @@
       "id": "J3",
       "type": "journals",
       "title": "Dynamic performance evaluation of evolutionary multi-objective optimization algorithms for gait cycle optimization of a 25-DOFs NAO humanoid robot",
-      "journal": "Applied Soft Computing, 2025",
+      "journal": "Swarm and Evolutionary Computation, Elsevier, 2025",
       "authors": "Pushpendra Gupta, Dilip Kumar Pratihar, Kalyanmoy Deb",
       "year": "2025",
       "link": "https://www.sciencedirect.com/science/article/abs/pii/S2210650225003013",
@@ -51,70 +51,10 @@
       "abstract": "Humanoid robots have attracted significant attention in recent years due to their potential to mimic human-like movements and perform various tasks in real-world environments. There is a growing interest among researchers to increasingly utilize Evolutionary Computation (EC) techniques to tackle complex robotics challenges, as these algorithms effectively manage the nonlinear dynamics inherent in humanoid robots. However, selecting the most suitable algorithm is challenging without a reference Pareto front (PF). Moreover, the entire region of the PF does not provide similar trade-offs. While most research has focused on optimizing only two to three objectives, bipedal locomotion inherently falls into the category of many-objective optimization with more than three competing objectives, also necessitating robust solutions that can withstand slight variations in design parameters to avoid unexpected results. This study presents a comprehensive investigation into the application of EC techniques to address these challenges, while optimizing the gait cycle of a 25 DOF NAO humanoid robot during both the single support phase (SSP) and the double support phase (DSP). Initially, constrained single-objective optimization problems for the SSP and DSP are solved using Particle Swarm Optimization (PSO) and Genetic Algorithms (GA). A comparison of the performances of PSO and GA is conducted over several runs by giving them equal opportunity to perform. PSO demonstrates superior performance compared to GA, attributed to its memory mechanism which enhances both local exploitation and global exploration capabilities. PSO outperforms GA in finding trajectories that offer higher swing height for nearly similar power consumption during SSP. The optimal solutions are validated using the Webots simulator. Next, the study considers two objectives simultaneously, viz., minimizing power consumption and maximizing stability. These are solved using the elitist non-dominated sorting genetic algorithm-II (NSGA-II) and multi-objective PSO (MOPSO). These EMO algorithms are compared using the Dominance Move indicator, formulated as a Mixed Integer Programming problem. The running performance metric is utilized to study the convergence and diversity behavior of MOPSO and NSGA-II. The results indicate that NSGA-II is a better choice for solving complex problems involving many constraints and variables. Two knee-finding methodologies, angle- and utility-based methods, are applied within NSGA-II to focus on the knee regions (KRs) of the PF to reduce the burden on decision-makers in selecting the most preferred solutions. These methods replace the crowding distance operator in NSGA-II to focus on KRs. The utility-based method is found to be more effective in identifying well-distributed solutions near KRs compared to the angle-based approach. Finally, constrained many-objective optimization problems are formulated for each gait scenario. The NSGA-III algorithm is employed to solve four conflicting objectives simultaneously, viz., minimizing power consumption, maximizing stability, minimizing torque fluctuations, and minimizing gait cycle time. The analysis reveals that Type-II robustness is superior, providing better-distributed and more convergent solutions, especially in complex real-world problems with several constraints and variables. The study on the influence of gait parameters on objective functions reveals that the higher hip height, lower swing height, and slower pace lead to lower power consumption. The faster speeds enhance stability at the cost of increased power consumption. The arm movements, particularly elbow roll, significantly enhance the stability without substantially increasing power consumption, especially during SSP. The velocities between SSP and DSP are crucial for smooth gait transitions. These findings highlight the importance of carefully balancing gait parameters to achieve optimal performance in different scenarios, whether prioritizing stability on challenging terrains or energy conservation in resource-limited environments. This study contributes significantly to the advancement of EC techniques in humanoid robotics, offering a comprehensive analysis of single-objective, multi-objective, and many-objective optimization approaches for gait cycle optimization. The findings not only deepen the understanding of humanoid robot dynamics but also introduce robust methodologies that can be extended to other complex real-world problems."
     },
     {
-      "id": "BC1",
-      "type": "books",
-      "title": "A Research Perspective on Ankle–Foot Prosthetics Designs for Transtibial Amputees",
-      "journal": "Book Chapter, 2024",
-      "authors": "Pushpendra Gupta et al.",
-      "year": "2024",
-      "link": "https://doi.org/10.1002/9781394175109.ch16",
-      "abstract": "Amputees may regain their lost limbs and continue daily activities using prosthetic ankle–foot devices, and researchers have presented various prosthetic foot designs that could improve functionality during the last several decades. However, a vast number of individuals are denied access to this technology, since most of the developed prosthetic devices are exorbitantly bulky in design and expensive. Thus, engaging amputees in different activities, such as walking, jogging, dancing, cycling, golfing, swimming, and other sports with a single design, becomes impossible. The current study aims to synthesize existing information on ankle– foot prosthetics based on demographics, engineering designs, and biomechanics underlying the biological foot to identify significant challenges and limitations of existing work to lead the future development of low-cost ankle prostheses. Based on the findings of the previous studies, it can be concluded that future research should focus on a variety of factors, including but not limited to low cost, domestic accessibility, robustness, moisture and corrosion resistance, susceptibility to easy fabrication, lightweight, suitable aesthetic, and psychosocial acceptability."
-    },
-    {
-      "id": "BC2",
-      "type": "books",
-      "title": "Advancing ankle–foot orthosis design through biomechanics, robotics, and additive manufacturing: A review",
-      "journal": "Book Chapter, 2024",
-      "authors": "Pushpendra Gupta et al.",
-      "year": "2024",
-      "link": "https://www.sciencedirect.com/science/article/abs/pii/B9780443222061000061",
-      "abstract": "Orthotic devices play a pivotal role in lower limb rehabilitation by providing support, stabilization, and movement assistance. However, their design must be optimized to achieve the desired functional outcomes and enhanced mobility. This comprehensive chapter reviews the biomechanics, design principles, manufacturing methods, and emerging technologies for advancing ankle–foot orthosis (AFO) functionality to improve lower limb rehabilitation. It analyzes ankle–foot biomechanics during gait to inform AFO design. Various types of AFO and their applications for spinal cord injury, stroke, and other conditions are discussed. Additive manufacturing techniques like 3D printing enable customized, patient-matched AFO fabrication. Integrating sensors, actuators, and control systems into powered AFOs promotes movement and neuroplasticity. However, technical challenges remain around device weight, cost, user acceptance, power needs, and safety. Future directions involve leveraging AI for personalized control, remote monitoring, and telemetry-based expert oversight. Overall, this research-backed review elucidates optimizing AFO design through integrating biomechanics, robotics, and advanced manufacturing to enhance mobility and quality of life."
-    },
-    {
-      "id": "BC3",
-      "type": "books",
-      "title": "Multi-objective optimization of rotational magnetorheological abrasive flow finishing process",
-      "journal": "Book Chapter, Taylor & Francis, 2024",
-      "authors": "Pushpendra Gupta, Vidyapati Kumar, Dilip Kumar Pratihar, Kalyanmoy Deb",
-      "year": "2024",
-      "link": "https://www.taylorfrancis.com/chapters/edit/10.1201/9781003496298-2/multi-objective-optimization-rotational-magnetorheological-abrasive-flow-finishing-process-pushpendra-gupta-vidyapati-kumar-dilip-kumar-pratihar-kalyanmoy-deb",
-      "abstract": "The rotational magnetorheological abrasive flow finishing (R-MRAFF) technique achieves uniform, nano-level mirror finishes with high material removal (MR) rates, distinguishing it from other nano-finishing methods by combining rotational motion and magnetorheological (MaR) abrasive particles during the nano-finishing process. Regression analysis is conducted to assess the influence of input process parameters, namely, extrusion pressure (P), finishing cycles (N), rotational speed of the magnet (S), and abrasive mesh size (M) on the responses like percentage improvement in surface roughness (%ΔRa) and amount of material removed (MR). The obtained regression equations for %ΔRa and MR are then used to formulate a multi-objective optimization problem, which is solved by an elitist non-dominated sorting genetic algorithm-II (NSGA-II). The final results revealed a trade-off between these two objectives. The higher P, N, and S levels effectively generated a trade-off for the better surface finish (SF) and a good MR. However, the lower levels of M are adequate for both the responses. The study's findings, particularly the identified optimal parameters' combinations, offer valuable insights for maximizing the potential of R-MRAFF, enabling the attainment of desired SF and material removal characteristics in a range of applications. This study can be extended to other complex manufacturing processes with multiple parameters and responses."
-    },
-    {
-      "id": "BC4",
-      "type": "books",
-      "title": "Comparative evaluation of deep learning techniques for multistage Alzheimer's prediction from magnetic resonance images",
-      "journal": "Book Chapter, 2024",
-      "authors": "Pushpendra Gupta et al.",
-      "year": "2024",
-      "link": "https://www.sciencedirect.com/science/article/abs/pii/B9780443222061000073",
-      "abstract": "This study applies deep learning (DL) techniques to predict different stages of Alzheimer's disease (AD) from magnetic resonance imaging (MRI) scans. AD is a neurodegenerative disorder that causes progressive dementia. Early diagnosis can help delay cognitive deterioration. The dataset consists of 6400 MRI images labeled as nondemented, very mild demented, mild demented, and moderate demented. Augmentation techniques are used to create 12,800 training images to balance the classes. Three DL models are tested on multiclass AD prediction: convolutional neural networks (CNN), ResNet-50, and VGG-16. The models are trained for 100 epochs on categorical cross-entropy loss with 80:20 train-test splits. VGG-16 achieves the best testing accuracy of 89.92%, followed by CNN (85.12%) and ResNet-50 (71.01%). VGG-16 also shows the highest precision, recall, and F1 scores for all four classes. It performs well in the mildly demented class, which is difficult for the other models. The results confirm that complex deep CNNs can detect subtle imaging features related to early AD changes. Transfer learning with pretrained models yields better results than training simple CNNs from scratch. The study offers insights into the best DL approaches for computer-aided diagnosis of AD using MRI data."
-    },
-    {
-      "id": "BC5",
-      "type": "books",
-      "title": "Soft robotics and computational intelligence: Transformative technologies reshaping biomedical engineering",
-      "journal": "Book Chapter, 2024",
-      "authors": "Pushpendra Gupta et al.",
-      "year": "2024",
-      "link": "https://www.sciencedirect.com/science/article/abs/pii/B9780443222061000085",
-      "abstract": "The introductory chapter begins by examining how emerging technologies are transforming biomedical engineering and healthcare. It highlights the importance of computational intelligence, which includes machine learning and deep learning, for diagnosing diseases, personalizing treatments, and optimizing resources. The chapter then introduces soft robotics—a fast-growing field that offers potential benefits for surgery, rehabilitation, prosthetics, and assistive devices due to its gentle interaction with tissues. It describes the manufacturing methods such as elastomer curing and additive manufacturing, and the applications such as surgical systems, exosuits, prosthetics, and artificial organs. It also discusses the main advantages of soft robotics, such as biocompatibility, maneuverability, and fatigue resistance, as well as the current challenges, such as miniaturization, power supply, and modeling complexity. The chapter ends by summarizing the detailed analyses of various innovations in the following chapters—covering topics such as multibistatic medical sensing, mathematical modeling, sleep analysis using wearables, ankle-foot orthosis design, machine learning for prognosis, disease prediction, automation-based advancements, brain activation topography, mental health frameworks, and wearable sensors with on-body electronics. The chapter illuminates the fusion of technologies like soft robotics, artificial intelligence, and wearables in shaping the future of healthcare."
-    },
-    {
-      "id": "BC6",
-      "type": "books",
-      "title": "Effect of Boron Trioxide Enriched Fluxes on the Microstructure and Mechanical Properties in Submerged Arc Welded Mild Steel Plates",
-      "journal": "Book Chapter, 2020",
-      "authors": "Pushpendra Gupta, Joydeep Roy, Ram Naresh Rai, A.K. Prasada Rao, Subhash Chandra Saha",
-      "year": "2020",
-      "link": "https://stm.bookpi.org/AAER-V1/article/view/333",
-      "abstract": "Among the several arc welding methods, the submerged arc welding is the preferred method for welding thick sections in the industry because of its several advantages which include high production rates, good weld quality, ease of automation and minimum operator skill requirement. This paper represents a study on the effect of B2O3 additions in fluxes on the microstructure and mechanical properties of the weld metal formed during Submerged Arc Welding of Mild Steel plates. Five fluxes with about 2.5, 5, 7.5, 10 and 12.5% B2O3 were used with a low carbon electrode. Welding process parameters were kept constant for all the conditions. The microstructure of weld metal for each flux consisted mainly of acicular ferrite, polygonal ferrite, grain boundary ferrites and equiaxed pearlite. It was noted that Vicker's hardness value was a function of boron content and showed a mixed trend. Impact Energy and Tensile Strength were increased with the increase in boron content in welds this can be attributed to relation with the higher acicular ferrite percentage. However, an optimum level of toughness and tensile strength was available with 7.5% and 5% of B2O3 respectively. A qualitative comparison has also been made with fresh flux through full metallography and mechanically."
-    },
-    {
       "id": "C1",
       "type": "conferences",
       "title": "Effect of B2O3 containing fluxes on the microstructure and mechanical properties in submerged arc welded mild steel plates",
-      "journal": "IOP Conference Series: Materials Science and Engineering, 2016",
+      "journal": "IOP Conference Series: Materials Science and Engineering, IOP Publishing, 2016",
       "authors": "Pushpendra Gupta, Joydeep Roy, Ram Naresh Rai, A.K. Prasada Rao, Subhash Chandra Saha",
       "year": "2016",
       "link": "https://iopscience.iop.org/article/10.1088/1757-899X/114/1/012102/meta",
@@ -124,9 +64,9 @@
       "id": "C2",
       "type": "conferences",
       "title": "A Knee-Based Multi-objective Optimization for Gait Cycle of 25-DOF NAO Humanoid Robot",
-      "journal": "12th International Conference on Soft Computing for Problem Solving 2023",
+      "journal": "Lecture Notes in Networks and Systems, vol 994, Springer, 2024",
       "authors": "Pushpendra Gupta, Kalyanmoy Deb, Dilip Kumar Pratihar",
-      "year": "2023",
+      "year": "2024",
       "link": "https://link.springer.com/chapter/10.1007/978-981-97-3180-0_4",
       "abstract": "A multi-objective optimization problem finds multiple optimal solutions represented on a Pareto front (PF), for conflicting objectives. Focusing on the \"knee\" region (KR) of the PF is preferred to targeting the entire PF since there is a significant degradation in one objective for a minor gain in another outside the KR. This paper applies two knee-finding methodologies—angle- and utility-based methods within the elitist non-dominated sorting genetic algorithm (NSGA-II), to address a multi-objective optimization problem of a 25-DOF NAO humanoid robot's gait cycle. The objectives are minimizing power consumption and maximizing dynamic balance margin. The single support phase exhibits a single KR, whereas the double support phase shows two KRs. This research demonstrates a knee-based multi-objective optimization algorithm to reduce the burden on decision-makers in selecting the most preferred solutions. It compares two knee-finding techniques and provides insights into a practical robotics problem for different gait cycle phases."
     },
@@ -134,11 +74,71 @@
       "id": "C3",
       "type": "conferences",
       "title": "A Comparative Study of Pareto Front of Optimal Solution Set for NAO Robot's Gait Optimization Using the Dominance Move Indicator Based on Mixed Integer Programming",
-      "journal": "6th National Conference on Advances in Multidisciplinary Design, Analysis and Optimization 2023",
+      "journal": "Lecture Notes in Mechanical Engineering, Springer, 2025",
       "authors": "Pushpendra Gupta, Dilip Kumar Pratihar, Kalyanmoy Deb",
-      "year": "2023",
+      "year": "2025",
       "link": "https://link.springer.com/chapter/10.1007/978-981-96-1158-4_45",
       "abstract": "Evolutionary multi-objective optimization (EMO) algorithms generate solution sets representing trade-offs between conflicting objectives. The comparison between two EMO algorithm performances is challenging for real-world problems lacking reference Pareto fronts (PFs). Most performance indicators require a reference PF or point to compare the Pareto-optimal solutions. This study uses Dominance Move (DoM), formulated as a Mixed Integer Programming (MIP), as it compares sets without any reference PF or points and avoids information loss. The GD+, IGD+, HV, Epsilon, and MIP-DoM indicators have been used to compare solution sets from two popular EMO algorithms—NSGA-II and MOPSO. EMO algorithms are used to minimize power consumption and maximize stability for a 25-DOF humanoid robot gait optimization problem. The results show that NSGA-II outperforms MOPSO on this highly constrained problem. The MIP-DoM exhibits the strongest correlation with the IGD+ indicator, whereas weaker correlations are seen for the Hypervolume and Epsilon indicators. The EMO performance has also been tracked over generations using IGD+, which provides additional insight into algorithm dynamics. The proposed techniques could be extended to other real-world optimization problems."
+    },
+    {
+      "id": "BC1",
+      "type": "books",
+      "title": "Multi-objective optimization of rotational magnetorheological abrasive flow finishing process",
+      "journal": "Nanofinishing of Materials for Advanced Industrial Applications, CRC Press / Taylor & Francis, 2023",
+      "authors": "Pushpendra Gupta, Vidyapati Kumar, Dilip Kumar Pratihar, Kalyanmoy Deb",
+      "year": "2023",
+      "link": "https://www.taylorfrancis.com/chapters/edit/10.1201/9781003496298-2/multi-objective-optimization-rotational-magnetorheological-abrasive-flow-finishing-process-pushpendra-gupta-vidyapati-kumar-dilip-kumar-pratihar-kalyanmoy-deb",
+      "abstract": "The rotational magnetorheological abrasive flow finishing (R-MRAFF) technique achieves uniform, nano-level mirror finishes with high material removal (MR) rates, distinguishing it from other nano-finishing methods by combining rotational motion and magnetorheological (MaR) abrasive particles during the nano-finishing process. Regression analysis is conducted to assess the influence of input process parameters, namely, extrusion pressure (P), finishing cycles (N), rotational speed of the magnet (S), and abrasive mesh size (M) on the responses like percentage improvement in surface roughness (%ΔRa) and amount of material removed (MR). The obtained regression equations for %ΔRa and MR are then used to formulate a multi-objective optimization problem, which is solved by an elitist non-dominated sorting genetic algorithm-II (NSGA-II). The final results revealed a trade-off between these two objectives. The higher P, N, and S levels effectively generated a trade-off for the better surface finish (SF) and a good MR. However, the lower levels of M are adequate for both the responses. The study's findings, particularly the identified optimal parameters' combinations, offer valuable insights for maximizing the potential of R-MRAFF, enabling the attainment of desired SF and material removal characteristics in a range of applications. This study can be extended to other complex manufacturing processes with multiple parameters and responses."
+    },
+    {
+      "id": "BC2",
+      "type": "books",
+      "title": "Comparative evaluation of deep learning techniques for multistage Alzheimer's prediction from magnetic resonance images",
+      "journal": "Biomedical Robots and Devices in Healthcare: Opportunities and Challenges for Future Applications, Elsevier, 2025",
+      "authors": "Pushpendra Gupta, Pradeep Nahak, Vidyapati Kumar, Dilip Kumar Pratihar",
+      "year": "2025",
+      "link": "https://www.sciencedirect.com/science/article/abs/pii/B9780443222061000073",
+      "abstract": "This study applies deep learning (DL) techniques to predict different stages of Alzheimer's disease (AD) from magnetic resonance imaging (MRI) scans. AD is a neurodegenerative disorder that causes progressive dementia. Early diagnosis can help delay cognitive deterioration. The dataset consists of 6400 MRI images labeled as nondemented, very mild demented, mild demented, and moderate demented. Augmentation techniques are used to create 12,800 training images to balance the classes. Three DL models are tested on multiclass AD prediction: convolutional neural networks (CNN), ResNet-50, and VGG-16. The models are trained for 100 epochs on categorical cross-entropy loss with 80:20 train-test splits. VGG-16 achieves the best testing accuracy of 89.92%, followed by CNN (85.12%) and ResNet-50 (71.01%). VGG-16 also shows the highest precision, recall, and F1 scores for all four classes. It performs well in the mildly demented class, which is difficult for the other models. The results confirm that complex deep CNNs can detect subtle imaging features related to early AD changes. Transfer learning with pretrained models yields better results than training simple CNNs from scratch. The study offers insights into the best DL approaches for computer-aided diagnosis of AD using MRI data."
+    },
+    {
+      "id": "BC3",
+      "type": "books",
+      "title": "Soft robotics and computational intelligence: Transformative technologies reshaping biomedical engineering",
+      "journal": "Biomedical Robots and Devices in Healthcare: Opportunities and Challenges for Future Applications, Elsevier, 2025",
+      "authors": "Thomas Gaskins, Pushpendra Gupta, Vidyapati Kumar, DK Pratihar, Faiz Iqbal",
+      "year": "2025",
+      "link": "https://www.sciencedirect.com/science/article/abs/pii/B9780443222061000085",
+      "abstract": "The introductory chapter begins by examining how emerging technologies are transforming biomedical engineering and healthcare. It highlights the importance of computational intelligence, which includes machine learning and deep learning, for diagnosing diseases, personalizing treatments, and optimizing resources. The chapter then introduces soft robotics—a fast-growing field that offers potential benefits for surgery, rehabilitation, prosthetics, and assistive devices due to its gentle interaction with tissues. It describes the manufacturing methods such as elastomer curing and additive manufacturing, and the applications such as surgical systems, exosuits, prosthetics, and artificial organs. It also discusses the main advantages of soft robotics, such as biocompatibility, maneuverability, and fatigue resistance, as well as the current challenges, such as miniaturization, power supply, and modeling complexity. The chapter ends by summarizing the detailed analyses of various innovations in the following chapters—covering topics such as multibistatic medical sensing, mathematical modeling, sleep analysis using wearables, ankle-foot orthosis design, machine learning for prognosis, disease prediction, automation-based advancements, brain activation topography, mental health frameworks, and wearable sensors with on-body electronics. The chapter illuminates the fusion of technologies like soft robotics, artificial intelligence, and wearables in shaping the future of healthcare."
+    },
+    {
+      "id": "BC4",
+      "type": "books",
+      "title": "Advancing ankle–foot orthosis design through biomechanics, robotics, and additive manufacturing: A review",
+      "journal": "Biomedical Robots and Devices in Healthcare: Opportunities and Challenges for Future Applications, Elsevier, 2025",
+      "authors": "Vidyapati Kumar, Pushpendra Gupta, Dilip Kumar Pratihar",
+      "year": "2025",
+      "link": "https://www.sciencedirect.com/science/article/abs/pii/B9780443222061000061",
+      "abstract": "Orthotic devices play a pivotal role in lower limb rehabilitation by providing support, stabilization, and movement assistance. However, their design must be optimized to achieve the desired functional outcomes and enhanced mobility. This comprehensive chapter reviews the biomechanics, design principles, manufacturing methods, and emerging technologies for advancing ankle–foot orthosis (AFO) functionality to improve lower limb rehabilitation. It analyzes ankle–foot biomechanics during gait to inform AFO design. Various types of AFO and their applications for spinal cord injury, stroke, and other conditions are discussed. Additive manufacturing techniques like 3D printing enable customized, patient-matched AFO fabrication. Integrating sensors, actuators, and control systems into powered AFOs promotes movement and neuroplasticity. However, technical challenges remain around device weight, cost, user acceptance, power needs, and safety. Future directions involve leveraging AI for personalized control, remote monitoring, and telemetry-based expert oversight. Overall, this research-backed review elucidates optimizing AFO design through integrating biomechanics, robotics, and advanced manufacturing to enhance mobility and quality of life."
+    },
+    {
+      "id": "BC5",
+      "type": "books",
+      "title": "A Research Perspective on Ankle–Foot Prosthetics Designs for Transtibial Amputees",
+      "journal": "Mechanical Engineering in Biomedical Applications, Scrivener Publishing, Wiley, 2024",
+      "authors": "Vidyapati Kumar, Pushpendra Gupta, Dilip Kumar Pratihar",
+      "year": "2024",
+      "link": "https://doi.org/10.1002/9781394175109.ch16",
+      "abstract": "Amputees may regain their lost limbs and continue daily activities using prosthetic ankle–foot devices, and researchers have presented various prosthetic foot designs that could improve functionality during the last several decades. However, a vast number of individuals are denied access to this technology, since most of the developed prosthetic devices are exorbitantly bulky in design and expensive. Thus, engaging amputees in different activities, such as walking, jogging, dancing, cycling, golfing, swimming, and other sports with a single design, becomes impossible. The current study aims to synthesize existing information on ankle– foot prosthetics based on demographics, engineering designs, and biomechanics underlying the biological foot to identify significant challenges and limitations of existing work to lead the future development of low-cost ankle prostheses. Based on the findings of the previous studies, it can be concluded that future research should focus on a variety of factors, including but not limited to low cost, domestic accessibility, robustness, moisture and corrosion resistance, susceptibility to easy fabrication, lightweight, suitable aesthetic, and psychosocial acceptability."
+    },
+    {
+      "id": "BC6",
+      "type": "books",
+      "title": "Effect of Boron Trioxide Enriched Fluxes on the Microstructure and Mechanical Properties in Submerged Arc Welded Mild Steel Plates",
+      "journal": "Advanced Aspects of Engineering Research Vol. 1, Book Pi, 2021",
+      "authors": "Pushpendra Gupta, Joydeep Roy, Subhash Chandra Saha",
+      "year": "2021",
+      "link": "https://stm.bookpi.org/AAER-V1/article/view/333",
+      "abstract": "Among the several arc welding methods, the submerged arc welding is the preferred method for welding thick sections in the industry because of its several advantages which include high production rates, good weld quality, ease of automation and minimum operator skill requirement. This paper represents a study on the effect of B2O3 additions in fluxes on the microstructure and mechanical properties of the weld metal formed during Submerged Arc Welding of Mild Steel plates. Five fluxes with about 2.5, 5, 7.5, 10 and 12.5% B2O3 were used with a low carbon electrode. Welding process parameters were kept constant for all the conditions. The microstructure of weld metal for each flux consisted mainly of acicular ferrite, polygonal ferrite, grain boundary ferrites and equiaxed pearlite. It was noted that Vicker's hardness value was a function of boron content and showed a mixed trend. Impact Energy and Tensile Strength were increased with the increase in boron content in welds this can be attributed to relation with the higher acicular ferrite percentage. However, an optimum level of toughness and tensile strength was available with 7.5% and 5% of B2O3 respectively. A qualitative comparison has also been made with fresh flux through full metallography and mechanically."
     }
   ]
 }
