@@ -2,7 +2,7 @@
   "publications": [
     {
       "id": "O1",
-      "type": "books",
+      "type": "book",
       "title": "Biomedical Robots and Devices in Healthcare: Opportunities and Challenges for Future Applications",
       "journal": "Elsevier, December 2024",
       "authors": "Faiz Iqbal, Pushpendra Gupta, Vidyapati Kumar, Dilip Kumar Pratihar (Eds.)",
@@ -82,7 +82,7 @@
     },
     {
       "id": "BC1",
-      "type": "books",
+      "type": "book-chapter",
       "title": "Multi-objective optimization of rotational magnetorheological abrasive flow finishing process",
       "journal": "Nanofinishing of Materials for Advanced Industrial Applications, CRC Press / Taylor & Francis, 2023",
       "authors": "Pushpendra Gupta, Vidyapati Kumar, Dilip Kumar Pratihar, Kalyanmoy Deb",
@@ -92,7 +92,7 @@
     },
     {
       "id": "BC2",
-      "type": "books",
+      "type": "book-chapter",
       "title": "Comparative evaluation of deep learning techniques for multistage Alzheimer's prediction from magnetic resonance images",
       "journal": "Biomedical Robots and Devices in Healthcare: Opportunities and Challenges for Future Applications, Elsevier, 2025",
       "authors": "Pushpendra Gupta, Pradeep Nahak, Vidyapati Kumar, Dilip Kumar Pratihar",
@@ -102,7 +102,7 @@
     },
     {
       "id": "BC3",
-      "type": "books",
+      "type": "book-chapter",
       "title": "Soft robotics and computational intelligence: Transformative technologies reshaping biomedical engineering",
       "journal": "Biomedical Robots and Devices in Healthcare: Opportunities and Challenges for Future Applications, Elsevier, 2025",
       "authors": "Thomas Gaskins, Pushpendra Gupta, Vidyapati Kumar, DK Pratihar, Faiz Iqbal",
@@ -112,7 +112,7 @@
     },
     {
       "id": "BC4",
-      "type": "books",
+      "type": "book-chapter",
       "title": "Advancing ankle–foot orthosis design through biomechanics, robotics, and additive manufacturing: A review",
       "journal": "Biomedical Robots and Devices in Healthcare: Opportunities and Challenges for Future Applications, Elsevier, 2025",
       "authors": "Vidyapati Kumar, Pushpendra Gupta, Dilip Kumar Pratihar",
@@ -122,7 +122,7 @@
     },
     {
       "id": "BC5",
-      "type": "books",
+      "type": "book-chapter",
       "title": "A Research Perspective on Ankle–Foot Prosthetics Designs for Transtibial Amputees",
       "journal": "Mechanical Engineering in Biomedical Applications, Scrivener Publishing, Wiley, 2024",
       "authors": "Vidyapati Kumar, Pushpendra Gupta, Dilip Kumar Pratihar",
@@ -132,7 +132,7 @@
     },
     {
       "id": "BC6",
-      "type": "books",
+      "type": "book-chapter",
       "title": "Effect of Boron Trioxide Enriched Fluxes on the Microstructure and Mechanical Properties in Submerged Arc Welded Mild Steel Plates",
       "journal": "Advanced Aspects of Engineering Research Vol. 1, Book Pi, 2021",
       "authors": "Pushpendra Gupta, Joydeep Roy, Subhash Chandra Saha",
