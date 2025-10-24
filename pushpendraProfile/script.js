@@ -170,3 +170,51 @@ window.addEventListener('load', () => {
         }, 2000);
     }
 });
+
+// Image Modal Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalClose = document.getElementById('modalClose');
+    const bookCoverImage = document.querySelector('.book-cover-image');
+
+    // Open modal when clicking on book cover image
+    if (bookCoverImage) {
+        bookCoverImage.addEventListener('click', function() {
+            modal.classList.add('show');
+            modalImage.src = this.src;
+            modalImage.alt = this.alt;
+            // Prevent body scrolling when modal is open
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    // Close modal when clicking the X button
+    if (modalClose) {
+        modalClose.addEventListener('click', function() {
+            closeModal();
+        });
+    }
+
+    // Close modal when clicking outside the image
+    if (modal) {
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal.classList.contains('show')) {
+            closeModal();
+        }
+    });
+
+    // Function to close modal
+    function closeModal() {
+        modal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+    }
+});
