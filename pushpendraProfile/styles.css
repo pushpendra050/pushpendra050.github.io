@@ -376,7 +376,7 @@ body {
 /* Book Cover Styles */
 .publication-item[data-type="book"] {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     align-items: flex-start;
 }
 
@@ -401,6 +401,7 @@ body {
 
 .book-details {
     flex: 1;
+    min-width: 0;
 }
 
 /* Image Modal Styles */
