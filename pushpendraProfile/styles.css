@@ -370,7 +370,8 @@ body {
 }
 
 .abstract-text.show {
-    max-height: 500px;
+    max-height: 600px;
+    overflow-y: auto;
 }
 
 /* Book Cover Styles */
@@ -920,6 +921,7 @@ body {
 
     .abstract-text.show {
         max-height: 300px;
+        overflow-y: auto;
         font-size: 0.9rem;
     }
 
