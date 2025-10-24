@@ -376,7 +376,7 @@ body {
 /* Book Cover Styles */
 .publication-item[data-type="book"] {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     align-items: flex-start;
 }
 
@@ -385,7 +385,7 @@ body {
 }
 
 .book-cover-image {
-    width: 100px;
+    width: 180px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.2);
@@ -400,6 +400,11 @@ body {
 }
 
 .book-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.publication-item[data-type="book"] .abstract-container {
     flex: 1;
     min-width: 0;
 }
@@ -772,7 +777,7 @@ body {
     }
 
     .book-cover-image {
-        width: 80px;
+        width: 120px;
     }
 
     .abstract-text.show {
@@ -920,7 +925,7 @@ body {
 
     /* Book Cover Responsive for Small Mobile */
     .book-cover-image {
-        width: 70px;
+        width: 100px;
     }
 
     /* Contact */
