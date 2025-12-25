@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pushpendra Gupta - Academic Portfolio</title>
+
+    <!-- Preconnect to external domains for faster resource loading -->
+    <link rel="preconnect" href="https://scholar.google.com">
+    <link rel="preconnect" href="https://linkedin.com">
+    <link rel="preconnect" href="https://github.com">
+
+    <!-- DNS prefetch for additional external links -->
+    <link rel="dns-prefetch" href="https://www.sciencedirect.com">
+    <link rel="dns-prefetch" href="https://www.worldscientific.com">
+    <link rel="dns-prefetch" href="https://link.springer.com">
+    <link rel="dns-prefetch" href="https://www.tandfonline.com">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,7 +28,7 @@
         <!-- Header Section -->
         <header class="header">
             <div class="profile-container">
-                <img src="Pushpendra_Gupta_Pic.jpg" alt="Pushpendra Gupta" class="profile-image">
+                <img src="Pushpendra_Gupta_Pic.jpg" alt="Pushpendra Gupta" class="profile-image" width="200" height="200" fetchpriority="high" decoding="async">
                 <h1>Pushpendra Gupta</h1>
                 <div class="subtitle">Ph.D. | Assistant Professor</div>
                 <div class="institution">BITS Pilani Digital, Birla Institute of Technology and Science, Bengaluru-560001, Karnataka, India</div>
@@ -175,7 +187,7 @@
                         <!-- Book -->
                         <div class="publication-item" data-type="book" data-id="O1">
                             <div class="book-cover-container">
-                                <img src="Book1.jpg" alt="Biomedical Robots and Devices in Healthcare Book Cover" class="book-cover-image">
+                                <img src="Book1.jpg" alt="Biomedical Robots and Devices in Healthcare Book Cover" class="book-cover-image" width="180" height="240" loading="lazy" decoding="async">
                             </div>
                             <div class="book-details">
                                 <h4><a href="https://www.sciencedirect.com/book/9780443222061/biomedical-robots-and-devices-in-healthcare" target="_blank" style="color: inherit; text-decoration: none;">Biomedical Robots and Devices in Healthcare: Opportunities and Challenges for Future Applications 🔗</a></h4>
@@ -617,10 +629,10 @@
     <div id="imageModal" class="image-modal">
         <div class="modal-content-wrapper">
             <span class="modal-close" id="modalClose">&times;</span>
-            <img id="modalImage" class="modal-image" src="" alt="Enlarged view">
+            <img id="modalImage" class="modal-image" src="" alt="Enlarged view" decoding="async">
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
