@@ -130,6 +130,12 @@ a {
     letter-spacing: 0.02em;
 }
 
+.sidebar .role {
+    margin-top: 0.2rem;
+    font-size: 0.85rem;
+    color: var(--sidebar-text);
+}
+
 .sidebar .institution {
     display: flex;
     gap: 0.5rem;

@@ -59,6 +59,7 @@
                 <img src="Pushpendra_Gupta_Pic.jpg" alt="Pushpendra Gupta" class="profile-image" width="200" height="200" fetchpriority="high" decoding="async">
                 <h1>Pushpendra Gupta</h1>
                 <div class="subtitle">Ph.D. | Assistant Professor</div>
+                <div class="role">Program Lead, B.S. in<br>Data Science &amp; Artificial Intelligence</div>
                 <div class="institution"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span>BITS Pilani Digital, Birla Institute of Technology and Science, Bengaluru-560001, Karnataka, India</span></div>
 
                 <div class="social-links">
@@ -123,7 +124,7 @@
                         <h3>Assistant Professor</h3>
                         <div class="year">Jul 2025 – Present</div>
                         <div class="institution">BITS Pilani Digital, Birla Institute of Technology and Science, Bengaluru-560001, Karnataka, India</div>
-                        <p>Digital Learning Division</p>
+                        <p>Academic Division &middot; <strong>Program Lead, B.S. in Data Science and Artificial Intelligence</strong></p>
                     </div>
 
                     <div class="education-card">
@@ -228,22 +229,21 @@
                         </div>
 
                         <!-- Journal Papers -->
-                        <div class="publication-item" data-type="journals" data-id="J1">
-                            <h4><a href="https://www.worldscientific.com/doi/abs/10.1142/S0219843623500111" target="_blank" rel="noopener">Analysis and Optimization of Gait Cycle of 25-dof NAO Robot using Particle Swarm Optimization and Genetic Algorithms<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></h4>
-                            <div class="journal">International Journal of Humanoid Robotics, World Scientific, Vol 21, No. 2, 2024</div>
+                        <div class="publication-item" data-type="journals" data-id="J3">
+                            <h4><a href="https://www.sciencedirect.com/science/article/abs/pii/S2210650225003013" target="_blank" rel="noopener">Dynamic performance evaluation of evolutionary multi-objective optimization algorithms for gait cycle optimization of a 25-DOFs NAO humanoid robot<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></h4>
+                            <div class="journal">Swarm and Evolutionary Computation, Elsevier, Vol. 99, 102144, 2025</div>
                             <div class="authors">Pushpendra Gupta, Dilip Kumar Pratihar, Kalyanmoy Deb</div>
                             <div class="abstract-container">
-                                <button class="abstract-toggle" id="btn-J1" onclick="toggleAbstract('J1')">Read Abstract</button>
-                                <div class="abstract-text" id="abstract-J1">
-                                    The gait cycle of 25-degree of freedom (DOF) humanoid robot, namely NAO robot, consists of single support phase (SSP) and double support phase (DSP). Both dynamic and stability analyses are carried out for this robot to determine its power consumption and dynamic stability margin, respectively. Constrained single-objective optimization problems are formulated for the SSP and DSP separately and solved using particle swarm optimization (PSO) and genetic algorithms (GA). A performance index, other than the fitness function, consisting of constraint values and maximum swing height, is also considered to compare PSO and GA-obtained optimal solutions. PSO is able to find the trajectories that offer higher swing height for nearly similar power consumption during SSP. A performance assessment of each algorithm based on the best fitness values in each generation across several runs is also carried out. These values are compared using the Wilcoxon rank-sum test, and PSO is found to be statistically better than GA. The optimal solutions from the simulations are tested using the Webots simulator to validate their efficacy on stability. Moreover, an investigation of the influence of gait parameters on power consumption during SSP and DSP reveals that the humanoid robot with a higher hip height, lower swing height, and slow pace consumes less power. The methodology developed in this is generic and can be easily extended to other robots.
+                                <button class="abstract-toggle" id="btn-J3" onclick="toggleAbstract('J3')">Read Abstract</button>
+                                <div class="abstract-text" id="abstract-J3">
+                                    Researchers are increasingly using optimization methods to achieve optimal dynamic performance of humanoid robots, often involving multiple conflicting objectives. Multi-objective optimization algorithms (MOAs) aim to find a Pareto front of optimal solutions, but selecting the best algorithm based on solution quality and computational efficiency remains challenging. This study comprehensively evaluates MOAs from different paradigms: swarm intelligence (CMOPSO), genetic algorithms (NSGA-II, DCNSGA-III), and decomposition-based approaches (CMOEA/D) for optimizing the gait cycle of a 25 DOF NAO humanoid robot during single support phase (SSP) and double support phase (DSP) scenarios. The algorithms' convergence, diversity, and constraint-handling capabilities are systematically analyzed in solving the gait generation problem. The bi-objective optimization simultaneously minimizes power consumption and maximizes dynamic stability subject to eight functional constraints with 12-13 decision parameters. Through performance evaluation using running inverted generational distance (IGD) and hypervolume (HV) metrics across eleven independent runs of each algorithm, NSGA-II emerges as the most suitable algorithm, demonstrating superior convergence and solution quality, while CMOPSO shows competitive performance with faster initial convergence. DCNSGA-III exhibits moderate performance with constraint-handling difficulties, and CMOEA/D demonstrates poor convergence characteristics requiring significantly more computational resources. Two distinct knee regions emerge during both SSP and DSP, representing optimal trade-off solutions, with a systematic framework provided for practitioners to select appropriate gait parameters based on operational priorities. The running IGD metric combined with HV validation demonstrates effectiveness in providing robust algorithmic insights, enabling practitioners to select suitable algorithms for similar complex real-world optimization problems.
                                 </div>
                             </div>
                         </div>
 
-                        
                         <div class="publication-item" data-type="journals" data-id="J2">
                             <h4><a href="https://www.tandfonline.com/doi/abs/10.1080/0305215X.2025.2502574" target="_blank" rel="noopener">Many-objective robust gait optimization for a 25-DOFs NAO robot using NSGA-III<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></h4>
-                            <div class="journal">Engineering Optimization, Taylor & Francis, 2025</div>
+                            <div class="journal">Engineering Optimization, Taylor & Francis, pp. 1&ndash;39, 2025</div>
                             <div class="authors">Pushpendra Gupta, Dilip Kumar Pratihar, Kalyanmoy Deb</div>
                             <div class="abstract-container">
                                 <button class="abstract-toggle" id="btn-J2" onclick="toggleAbstract('J2')">Read Abstract</button>
@@ -253,15 +253,14 @@
                             </div>
                         </div>
 
-                        
-                        <div class="publication-item" data-type="journals" data-id="J3">
-                            <h4><a href="https://www.sciencedirect.com/science/article/abs/pii/S2210650225003013" target="_blank" rel="noopener">Dynamic performance evaluation of evolutionary multi-objective optimization algorithms for gait cycle optimization of a 25-DOFs NAO humanoid robot<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></h4>
-                            <div class="journal">Swarm and Evolutionary Computation, Elsevier, 2025</div>
+                        <div class="publication-item" data-type="journals" data-id="J1">
+                            <h4><a href="https://www.worldscientific.com/doi/abs/10.1142/S0219843623500111" target="_blank" rel="noopener">Analysis and Optimization of Gait Cycle of 25-dof NAO Robot using Particle Swarm Optimization and Genetic Algorithms<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></h4>
+                            <div class="journal">International Journal of Humanoid Robotics, World Scientific, Vol. 21, No. 2, 2350011, 2024</div>
                             <div class="authors">Pushpendra Gupta, Dilip Kumar Pratihar, Kalyanmoy Deb</div>
                             <div class="abstract-container">
-                                <button class="abstract-toggle" id="btn-J3" onclick="toggleAbstract('J3')">Read Abstract</button>
-                                <div class="abstract-text" id="abstract-J3">
-                                    Researchers are increasingly using optimization methods to achieve optimal dynamic performance of humanoid robots, often involving multiple conflicting objectives. Multi-objective optimization algorithms (MOAs) aim to find a Pareto front of optimal solutions, but selecting the best algorithm based on solution quality and computational efficiency remains challenging. This study comprehensively evaluates MOAs from different paradigms: swarm intelligence (CMOPSO), genetic algorithms (NSGA-II, DCNSGA-III), and decomposition-based approaches (CMOEA/D) for optimizing the gait cycle of a 25 DOF NAO humanoid robot during single support phase (SSP) and double support phase (DSP) scenarios. The algorithms' convergence, diversity, and constraint-handling capabilities are systematically analyzed in solving the gait generation problem. The bi-objective optimization simultaneously minimizes power consumption and maximizes dynamic stability subject to eight functional constraints with 12-13 decision parameters. Through performance evaluation using running inverted generational distance (IGD) and hypervolume (HV) metrics across eleven independent runs of each algorithm, NSGA-II emerges as the most suitable algorithm, demonstrating superior convergence and solution quality, while CMOPSO shows competitive performance with faster initial convergence. DCNSGA-III exhibits moderate performance with constraint-handling difficulties, and CMOEA/D demonstrates poor convergence characteristics requiring significantly more computational resources. Two distinct knee regions emerge during both SSP and DSP, representing optimal trade-off solutions, with a systematic framework provided for practitioners to select appropriate gait parameters based on operational priorities. The running IGD metric combined with HV validation demonstrates effectiveness in providing robust algorithmic insights, enabling practitioners to select suitable algorithms for similar complex real-world optimization problems.
+                                <button class="abstract-toggle" id="btn-J1" onclick="toggleAbstract('J1')">Read Abstract</button>
+                                <div class="abstract-text" id="abstract-J1">
+                                    The gait cycle of 25-degree of freedom (DOF) humanoid robot, namely NAO robot, consists of single support phase (SSP) and double support phase (DSP). Both dynamic and stability analyses are carried out for this robot to determine its power consumption and dynamic stability margin, respectively. Constrained single-objective optimization problems are formulated for the SSP and DSP separately and solved using particle swarm optimization (PSO) and genetic algorithms (GA). A performance index, other than the fitness function, consisting of constraint values and maximum swing height, is also considered to compare PSO and GA-obtained optimal solutions. PSO is able to find the trajectories that offer higher swing height for nearly similar power consumption during SSP. A performance assessment of each algorithm based on the best fitness values in each generation across several runs is also carried out. These values are compared using the Wilcoxon rank-sum test, and PSO is found to be statistically better than GA. The optimal solutions from the simulations are tested using the Webots simulator to validate their efficacy on stability. Moreover, an investigation of the influence of gait parameters on power consumption during SSP and DSP reveals that the humanoid robot with a higher hip height, lower swing height, and slow pace consumes less power. The methodology developed in this is generic and can be easily extended to other robots.
                                 </div>
                             </div>
                         </div>
@@ -282,7 +281,7 @@
                         <!-- Conference Papers -->
                         <div class="publication-item" data-type="conferences" data-id="C1">
                             <h4><a href="https://iopscience.iop.org/article/10.1088/1757-899X/114/1/012102/meta" target="_blank" rel="noopener">Effect of B2O3 containing fluxes on the microstructure and mechanical properties in submerged arc welded mild steel plates<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></h4>
-                            <div class="journal">IOP Conference Series: Materials Science and Engineering, IOP Publishing, 2016</div>
+                            <div class="journal">IOP Conference Series: Materials Science and Engineering, Vol. 114, No. 1, 012102, IOP Publishing, 2016</div>
                             <div class="authors">Pushpendra Gupta, Joydeep Roy, Ram Naresh Rai, A.K. Prasada Rao, Subhash Chandra Saha</div>
                             <div class="abstract-container">
                                 <button class="abstract-toggle" id="btn-C1" onclick="toggleAbstract('C1')">Read Abstract</button>
@@ -295,7 +294,7 @@
                         
                         <div class="publication-item" data-type="conferences" data-id="C2">
                             <h4><a href="https://link.springer.com/chapter/10.1007/978-981-97-3180-0_4" target="_blank" rel="noopener">A Knee-Based Multi-objective Optimization for Gait Cycle of 25-DOF NAO Humanoid Robot<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></h4>
-                            <div class="journal">Lecture Notes in Networks and Systems, vol 994, Springer, 2024</div>
+                            <div class="journal">12th International Conference on Soft Computing for Problem Solving (SocProS 2023), Lecture Notes in Networks and Systems, vol. 994, pp. 47&ndash;62, Springer, 2024</div>
                             <div class="authors">Pushpendra Gupta, Kalyanmoy Deb, Dilip Kumar Pratihar</div>
                             <div class="abstract-container">
                                 <button class="abstract-toggle" id="btn-C2" onclick="toggleAbstract('C2')">Read Abstract</button>
@@ -308,7 +307,7 @@
                         
                         <div class="publication-item" data-type="conferences" data-id="C3">
                             <h4><a href="https://link.springer.com/chapter/10.1007/978-981-96-1158-4_45" target="_blank" rel="noopener">A Comparative Study of Pareto Front of Optimal Solution Set for NAO Robot's Gait Optimization Using the Dominance Move Indicator Based on Mixed Integer Programming<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></h4>
-                            <div class="journal">Lecture Notes in Mechanical Engineering, Springer, 2025</div>
+                            <div class="journal">6th National Conference on Advances in Multidisciplinary Design, Analysis and Optimization (NCMDAO 2023), Lecture Notes in Mechanical Engineering, pp. 427&ndash;435, Springer, 2025</div>
                             <div class="authors">Pushpendra Gupta, Dilip Kumar Pratihar, Kalyanmoy Deb</div>
                             <div class="abstract-container">
                                 <button class="abstract-toggle" id="btn-C3" onclick="toggleAbstract('C3')">Read Abstract</button>
@@ -396,6 +395,12 @@
                             </div>
                         </div>
 
+                        <div class="publication-item" data-type="book-chapter" data-id="BC7">
+                            <h4>Emerging Techniques for Evolutionary Single- and Multi-Objective Optimization with Application to Humanoid Robot Gait Generation</h4>
+                            <div class="journal">Contemporary Advancement in Evolutionary Multi-Objective Optimization (CAEMOO), Genetic and Evolutionary Computation (GEVO) book series, Springer [Abstract Accepted]</div>
+                            <div class="authors">Pushpendra Gupta, Dilip Kumar Pratihar, Kalyanmoy Deb</div>
+                        </div>
+
                         <!-- Under Review Publications -->
                         <div class="publication-item" data-type="under-review" data-id="UR1">
                             <h4>Designing Driver Drowsiness Detection Systems: Challenges and Solutions</h4>
@@ -407,6 +412,12 @@
                                     Conducted comprehensive review of state-of-the-art driver drowsiness detection systems and highlighted main challenges in existing methods. Focused on how to develop an Adaptive Driver Drowsiness Alert System (ADDAS) that uses responsible AI techniques to provide personalized and secure drowsiness prediction. Suggested solutions for feature discrepancy, privacy concerns, model robustness, and explainability challenges using transduction transfer learning and multimodal data integration.
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="publication-item" data-type="under-review" data-id="UR6">
+                            <h4>Sustainable Optimization of Micro-EDM Process Parameters Using Multi-Objective Bonobo Optimizer: A Metaheuristic Approach for Precision Manufacturing</h4>
+                            <div class="journal">International Journal of Precision Engineering and Manufacturing, 2025 [Under Review]</div>
+                            <div class="authors">Vidyapati Kumar, Pushpendra Gupta, Ankita Mistri</div>
                         </div>
 
                         <div class="publication-item" data-type="under-review" data-id="UR2">
