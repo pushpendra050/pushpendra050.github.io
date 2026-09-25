@@ -1,202 +1,109 @@
-// Global variable to store publications data
-let publicationsData = [];
-
-// Load publications data from JSON file
-async function loadPublicationsData() {
-    try {
-        const response = await fetch('abstracts.json');
-        const data = await response.json();
-        publicationsData = data.publications;
-        console.log('Publications data loaded successfully');
-    } catch (error) {
-        console.error('Error loading publications data:', error);
-    }
-}
-
 // Toggle abstract visibility
 function toggleAbstract(pubId) {
     const abstractText = document.getElementById(`abstract-${pubId}`);
     const button = document.getElementById(`btn-${pubId}`);
 
     if (abstractText && button) {
-        if (abstractText.classList.contains('show')) {
-            abstractText.classList.remove('show');
-            button.textContent = 'Read Abstract';
-        } else {
-            abstractText.classList.add('show');
-            button.textContent = 'Hide Abstract';
-        }
+        const isOpen = abstractText.classList.toggle('show');
+        button.textContent = isOpen ? 'Hide Abstract' : 'Read Abstract';
+        button.setAttribute('aria-expanded', isOpen);
     }
 }
 
-// Scroll animations
-const sections = document.querySelectorAll('.section');
+// Publication filter functionality
+function filterPublications(type, button) {
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    if (button) {
+        button.classList.add('active');
+    }
+
+    document.querySelectorAll('.publication-item').forEach(pub => {
+        pub.style.display = (type === 'all' || pub.dataset.type === type) ? '' : 'none';
+    });
+}
+
+// Scroll progress bar
 const scrollProgress = document.getElementById('scrollProgress');
 
 function updateScrollProgress() {
-    const scrolled = window.pageYOffset;
     const maxHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = (scrolled / maxHeight) * 100;
+    const progress = maxHeight > 0 ? (window.pageYOffset / maxHeight) * 100 : 0;
     scrollProgress.style.width = progress + '%';
 }
 
-function checkSections() {
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        const windowHeight = window.innerHeight;
-        const scrollPosition = window.pageYOffset;
+window.addEventListener('scroll', updateScrollProgress, { passive: true });
+window.addEventListener('load', updateScrollProgress);
 
-        if (scrollPosition >= sectionTop - windowHeight + 100) {
-            section.classList.add('visible');
-        }
-    });
-}
-
-// Mobile Navigation Toggle
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
+    const links = document.querySelectorAll('.nav-links a');
+
+    // Mobile navigation drawer
+    function setMenu(open) {
+        hamburger.classList.toggle('active', open);
+        navLinks.classList.toggle('active', open);
+        hamburger.setAttribute('aria-expanded', open);
+    }
 
     if (hamburger && navLinks) {
-        hamburger.addEventListener('click', function() {
-            this.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
+        hamburger.addEventListener('click', () => setMenu(!navLinks.classList.contains('active')));
 
-        // Close menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function() {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
+        links.forEach(link => link.addEventListener('click', () => setMenu(false)));
 
-        // Close menu when clicking outside
         document.addEventListener('click', function(event) {
-            const isClickInsideNav = navLinks.contains(event.target);
-            const isClickOnHamburger = hamburger.contains(event.target);
-
-            if (!isClickInsideNav && !isClickOnHamburger && navLinks.classList.contains('active')) {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
+            if (navLinks.classList.contains('active') &&
+                !navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+                setMenu(false);
             }
         });
     }
-});
 
-// Smooth scrolling for navigation links
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-
-            window.scrollTo({
-                top: targetSection.offsetTop - 80,
-                behavior: 'smooth'
+    // Highlight the nav link of the section currently in view
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    links.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                    });
+                }
             });
-        });
-    });
-});
+        }, { rootMargin: '-30% 0px -60% 0px' });
 
-// Publication filter functionality
-function filterPublications(type) {
-    const publications = document.querySelectorAll('.publication-item');
-    const filterBtns = document.querySelectorAll('.filter-btn');
-
-    // Update active filter button
-    filterBtns.forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
-
-    // Filter publications
-    publications.forEach((pub, index) => {
-        if (type === 'all' || pub.dataset.type === type) {
-            pub.style.display = 'block';
-            pub.style.animationDelay = (index * 0.1) + 's';
-        } else {
-            pub.style.display = 'none';
-        }
-    });
-}
-
-// Event listeners
-window.addEventListener('scroll', () => {
-    updateScrollProgress();
-    checkSections();
-});
-
-window.addEventListener('load', () => {
-    checkSections();
-    updateScrollProgress();
-    loadPublicationsData();
-});
-
-// Add some interactive hover effects
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.education-card, .skill-category, .publication-item').forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-5px) scale(1.02)';
-        });
-
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
-});
-
-// Add typing effect to header
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
+        document.querySelectorAll('.section').forEach(section => observer.observe(section));
     }
-    type();
-}
 
-// Initialize typing effect after page loads
-window.addEventListener('load', () => {
-    const subtitle = document.querySelector('.subtitle');
-    if (subtitle) {
-        setTimeout(() => {
-            typeWriter(subtitle, 'Ph.D. | Assistant Professor', 150);
-        }, 2000);
+    // Keep the footer year current
+    const year = document.getElementById('year');
+    if (year) {
+        year.textContent = new Date().getFullYear();
     }
-});
 
-// Image Modal Functionality
-document.addEventListener('DOMContentLoaded', function() {
+    // Image modal for the book cover
     const modal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
     const modalClose = document.getElementById('modalClose');
     const bookCoverImage = document.querySelector('.book-cover-image');
 
-    // Open modal when clicking on book cover image
+    function closeModal() {
+        modal.classList.remove('show');
+        document.body.style.overflow = '';
+    }
+
     if (bookCoverImage) {
         bookCoverImage.addEventListener('click', function() {
-            modal.classList.add('show');
             modalImage.src = this.src;
             modalImage.alt = this.alt;
-            // Prevent body scrolling when modal is open
+            modal.classList.add('show');
             document.body.style.overflow = 'hidden';
         });
     }
 
-    // Close modal when clicking the X button
     if (modalClose) {
-        modalClose.addEventListener('click', function() {
-            closeModal();
-        });
+        modalClose.addEventListener('click', closeModal);
     }
 
-    // Close modal when clicking outside the image
     if (modal) {
         modal.addEventListener('click', function(event) {
             if (event.target === modal) {
@@ -205,16 +112,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Close modal with Escape key
     document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape' && modal.classList.contains('show')) {
-            closeModal();
+        if (event.key === 'Escape') {
+            if (modal && modal.classList.contains('show')) {
+                closeModal();
+            }
+            if (navLinks && navLinks.classList.contains('active')) {
+                setMenu(false);
+            }
         }
     });
-
-    // Function to close modal
-    function closeModal() {
-        modal.classList.remove('show');
-        document.body.style.overflow = 'auto';
-    }
 });

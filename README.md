@@ -6,7 +6,7 @@
 
 ## About
 
-**Current Position:** Assistant Professor, Data Science and Artificial Intelligence Department  
+**Current Position:** Assistant Professor and Program Lead, B.S. in Data Science and Artificial Intelligence  
 **Institution:** BITS Pilani Digital, Birla Institute of Technology And Science, Bangalore  
 **Ph.D.:** Indian Institute of Technology Kharagpur
 **M.Tech** National Institute of Technology Agartala
@@ -57,4 +57,4 @@
 **Email:** pushpendra050@gmail.com
 
 
-**Last Updated:** August 2025
+**Last Updated:** September 2025
